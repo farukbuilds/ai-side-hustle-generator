@@ -1,112 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description" content="Find practical AI side hustle ideas based on your skills, device, budget and goals.">
-
-  <title>AI Side Hustle Generator</title>
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Answer five quick questions and get a personalized AI side hustle idea with a 7-day start plan.">
+<meta name="theme-color" content="#12302b">
+<title>AI Side Hustle Finder</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <h1>AI Side Hustle Finder</h1>
+    <p class="sub">Find an AI-powered side hustle that fits your skills, budget and goals.</p>
+    <p class="intro">Answer a few questions and get a personalized side hustle idea you can start with what you already have.</p>
+  </div>
+</header>
 
-  <main class="app">
+<main id="main" class="wrap">
+  <section id="wizard" class="card" aria-label="Side hustle questions">
+    <div class="prog">
+      <span id="stepLabel" aria-live="polite">Step 1 of 5</span>
+      <div id="progress" class="track" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1" aria-label="Question progress"><div id="bar"></div></div>
+    </div>
+    <form id="form" novalidate>
+      <div id="qbox"></div>
+      <p id="err" class="err" role="alert"></p>
+      <div class="nav">
+        <button type="button" id="back" class="btn ghost" hidden>Back</button>
+        <button type="submit" id="next" class="btn">Next</button>
+      </div>
+    </form>
+  </section>
 
-    <section class="hero">
-      <div class="badge">AI SIDE HUSTLE TOOL</div>
+  <section id="result" aria-live="polite" hidden></section>
 
-      <h1>Find an AI Side Hustle You Can Start</h1>
+  <section id="promo" class="promo" hidden aria-labelledby="promoT">
+    <h2 id="promoT">Want More AI Side Hustle Ideas?</h2>
+    <p>Get more practical AI side hustle ideas you can explore, test and turn into income.</p>
+    <a class="btn alt" href="https://selar.com/1775t9778o" target="_blank" rel="noopener noreferrer">Explore the AI Side Hustle Guide</a>
+  </section>
+</main>
 
-      <p>
-        Tell us what you have, what you're good at, and what you want to achieve.
-        Get a practical AI side hustle idea with tools and your first steps.
-      </p>
-    </section>
-
-
-    <section class="card">
-
-      <label for="device">What do you have?</label>
-
-      <select id="device">
-        <option value="phone">Only a phone</option>
-        <option value="laptop">Phone + laptop</option>
-        <option value="both">Phone + laptop + internet</option>
-      </select>
-
-
-      <label for="budget">Starting budget</label>
-
-      <select id="budget">
-        <option value="0">₦0</option>
-        <option value="low">₦1,000–₦5,000</option>
-        <option value="medium">₦5,000–₦20,000</option>
-      </select>
-
-
-      <label for="skill">What are you good at?</label>
-
-      <select id="skill">
-        <option value="writing">Writing & research</option>
-        <option value="design">Design & visuals</option>
-        <option value="video">Video & content</option>
-        <option value="social">Social media</option>
-        <option value="sales">Sales & communication</option>
-        <option value="learning">I'm a complete beginner</option>
-      </select>
-
-
-      <label for="goal">What is your goal?</label>
-
-      <select id="goal">
-        <option value="quick">Make my first small amount quickly</option>
-        <option value="service">Build a service business</option>
-        <option value="product">Create a digital product</option>
-        <option value="longterm">Build something long-term</option>
-      </select>
-
-
-      <button id="generateBtn">
-        Generate My Side Hustle
-      </button>
-
-    </section>
-
-
-    <section id="result" class="result card hidden"></section>
-
-
-    <section class="promo card">
-
-      <h2>Want 100 more AI side hustle ideas?</h2>
-
-      <p>
-        Explore the complete guide for more AI side hustle ideas
-        you can research, test and turn into income.
-      </p>
-
-      <a
-        href="https://selar.com/m/farukonlinepdfguide"
-        target="_blank"
-        rel="noopener"
-      >
-        Explore the PDF Guides →
-      </a>
-
-    </section>
-
-
-    <footer>
-      Ideas are for research and testing. Income is not guaranteed.
-    </footer>
-
-  </main>
-
-
-  <script src="script.js"></script>
-
+<footer class="foot">
+  <div class="wrap">
+    <strong>AI Side Hustle Finder</strong>
+    <p>Built to help beginners discover practical AI income opportunities.</p>
+  </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
